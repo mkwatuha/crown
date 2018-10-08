@@ -1,0 +1,9 @@
+insert into sms_messagereived(
+message_name,
+message_from,
+message_message,
+received_date) values(
+'Alphay',
+'254703399915',
+'Heloww me here',
+'2012-02-19 00:43:26')

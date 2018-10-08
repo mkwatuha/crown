@@ -1,0 +1,24 @@
+jdbc:mysql://localhost/hrp
+jdbc:oracle:thin:@hostname:port:database_name
+
+
+CREATE SCHEMA MAXIMO;
+GRANT ALL ON SCHEMA MAXIMO to SYSTEM; 
+
+CREATE USER MAXIMO 
+    IDENTIFIED BY maximo1 
+    DEFAULT TABLESPACE maximo 
+    QUOTA 10M ON maximo
+    TEMPORARY TABLESPACE maximotemp
+    QUOTA 5M ON system 
+    PROFILE app_user 
+    PASSWORD EXPIRE;
+
+CREATE USER sidney 
+    IDENTIFIED BY out_standing1 
+    DEFAULT TABLESPACE example 
+    QUOTA 10M ON example 
+    TEMPORARY TABLESPACE temp
+    QUOTA 5M ON system 
+    PROFILE app_user 
+    PASSWORD EXPIRE;
